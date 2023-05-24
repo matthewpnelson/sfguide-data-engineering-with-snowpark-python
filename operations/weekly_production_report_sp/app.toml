@@ -1,0 +1,17 @@
+snowsql_config_path = "~/.snowsql/config"
+snowsql_connection_name = "dev"
+
+[default]
+input_parameters = "()"
+return_type = "string"
+file = "app.zip"
+name = "weekly_production_report_sp"
+handler = "app.main"
+execute_as_caller = true
+
+[dev]
+database = "CANLIN"
+schema = "HARMONIZED"
+warehouse = "CDE_WH"
+role = "CDE_ROLE"
+overwrite = true

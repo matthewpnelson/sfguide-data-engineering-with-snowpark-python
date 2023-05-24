@@ -1,0 +1,17 @@
+snowsql_config_path = "~/.snowsql/config"
+snowsql_connection_name = "dev"
+
+[default]
+input_parameters = "(sales_gas_alloc_e3m3 float, gas_gross_e3m3 float, work_interest float, gas_shrink float)"
+return_type = "float"
+file = "app.zip"
+name = "gross_to_sales_gas_udf"
+handler = "app.main"
+execute_as_caller = true
+
+[dev]
+database = "CANLIN"
+schema = "HARMONIZED"
+warehouse = "CDE_WH"
+role = "CDE_ROLE"
+overwrite = true

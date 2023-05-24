@@ -1,0 +1,17 @@
+snowsql_config_path = "~/.snowsql/config"
+snowsql_connection_name = "dev"
+
+[default]
+input_parameters = "(gas_net_mcf float, ngl_yield_factor float, work_interest float)"
+return_type = "float"
+file = "app.zip"
+name = "gas_net_mcf_to_gross_ngl_bbl_udf"
+handler = "app.main"
+execute_as_caller = true
+
+[dev]
+database = "CANLIN"
+schema = "HARMONIZED"
+warehouse = "CDE_WH"
+role = "CDE_ROLE"
+overwrite = true

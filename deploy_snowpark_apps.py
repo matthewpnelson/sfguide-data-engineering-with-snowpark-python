@@ -1,7 +1,7 @@
 import sys;
 import os;
 
-ignore_folders = ['__pycache__', '.ipynb_checkpoints']
+ignore_folders = ['__pycache__', '.ipynb_checkpoints', 'steps']
 
 if len(sys.argv) != 2:
     print("Root directory is required")
